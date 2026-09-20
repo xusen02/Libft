@@ -1,66 +1,73 @@
-*This project has been created as part of the 42 curriculum by [txu-sen].*
-
+# push_swap
+This project has been created as part of the 42 curriculum by [txu-sen] & [zyeo].
 ## Description
 
-**Libft** is the foundational coding project at 42. The primary goal is to rebuild a functional subset of the standard C library (`libc`) from scratch, alongside a series of custom utility functions and linked list data structures. 
-
-By reimplementing functions like `strlen`, `memcpy`, `strlcpy`, and `atoi`, students develop a rigorous understanding of memory allocation, pointer arithmetic, string parsing, and low-level data handling. The final product is packaged into a static library (`libft.a`), which becomes an essential tool utilized across subsequent core curriculum projects.
-
+`push_swap` is an algorithmic project that challenges you to sort a stack of integers using a restricted set of stack operations with the absolute minimum number of moves.
 ---
-
-## Detailed Library Description
-
-The library is organized into three distinct operational modules:
-
-### 1. Libc Functions
-Recreations of standard C library functions, prefixed with `ft_`:
-* **Character Evaluation & Conversion:** `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint`, `ft_toupper`, `ft_tolower`
-* **String Examination & Manipulation:** `ft_strlen`, `ft_strchr`, `ft_strrchr`, `ft_strncmp`, `ft_strnstr`, `ft_strlcpy`, `ft_strlcat`, `ft_strdup`
-* **Memory Management:** `ft_memset`, `ft_bzero`, `ft_memcpy`, `ft_memmove`, `ft_memchr`, `ft_memcmp`, `ft_calloc`
-* **Numeric Parsing:** `ft_atoi`
-
-### 2. Additional Functions
-Custom utility functions designed for extended string manipulation, memory splitting, and file descriptor output:
-* **String Utilities:** `ft_substr`, `ft_strjoin`, `ft_strtrim`, `ft_split`, `ft_itoa`, `ft_strmapi`, `ft_striteri`
-* **File Descriptors:** `ft_putchar_fd`, `ft_putstr_fd`, `ft_putendl_fd`, `ft_putnbr_fd`
-
-### 3. Linked Lists
-A comprehensive suite for managing singly linked lists (`t_list`):
-* **List Management:** `ft_lstnew`, `ft_lstsize`, `ft_lstlast`
-* **Node Insertion:** `ft_lstadd_front`, `ft_lstadd_back`
-* **Memory Deallocation:** `ft_lstdelone`, `ft_lstclear`
-* **Iteration & Mapping:** `ft_lstiter`, `ft_lstmap`
-
----
-## Resources
-
-### Documentation & References
-* [man pages (Linux/POSIX)](https://man7.org/linux/man-pages/) — For verifying the exact behavior and return values of standard libc functions.
-* [C Programming language (K&R)](https://en.wikipedia.org/wiki/The_C_Programming_Language) — Standard reference for pointers, memory layouts, and data structures in C.
-* 42 Norminette Documentation — Coding standards and formatting requirements.
-
-### AI Usage Disclosure
-* **Task:** Formatting and structuring the `README.md` file layout according to 42 requirements.
-* **Parts of the project:** AI assisted in organizing markdown sections, drafting documentation templates, and ensuring all mandatory prompt elements were integrated correctly. Core C code implementations were written independently by the student.
 
 ## Instructions
 
-### Compilation
-The project includes a complete `Makefile` to handle compilation rules for the static library.
+### 1. Compilation
+
+Clone the repository and compile using the provided `Makefile`:
 
 ```bash
-# Compile core mandatory functions
+git clone [https://github.com/xusen02/push_swap.git]
+cd push_swap
 make
 
-# Remove all temporary object files
-make clean
+```
 
-# Remove object files and the final static library (libft.a)
-make fclean
+*Available Makefile rules:* `make`, `make clean`, `make fclean`, `make re`.
 
-# Perform a complete clean and re-compile
-make re
+### 2. Usage
+
+Run the program by passing space-separated integers as arguments:
+
+```bash
+./push_swap 4 67 3 87 23
+
+```
+
+This outputs the sequence of instructions required to sort the stack.
+
+### 3. Testing & Benchmarking
+
+To verify correctness and count operations:
+
+* **Test with 100 random numbers:**
+```bash
+ARG=\((shuf -i 1-100 -n 100 \vert{} tr '\\n' ' '); ./push_swap\)ARG | wc -l
+
+```
 
 
+*(Target for maximum grade: < 700 operations)*
+* **Test with 500 random numbers:**
+```bash
+ARG=\((shuf -i 1-500 -n 500 \vert{} tr '\\n' ' '); ./push_swap\)ARG | wc -l
 
-# Libft
+```
+
+
+*(Target for maximum grade: < 5500 operations)*
+
+---
+
+## Resources
+
+Helpful links, documentation, and conceptual guides for mastering `push_swap`:
+
+* **Algorithmic Guides & Theory:**
+* [Big-O Notation & Complexity Analysis](https://en.wikipedia.org/wiki/Big_O_notation)
+
+
+* **Visualizers & Testing Tools:**
+* [Push_swap Visualizer (GitHub)](https://github.com/o-reo/push_swap_visualizer) — Excellent GUI tool to visually debug and watch your algorithm sort stacks.
+* [Push_swap Tester (GitHub)](https://github.com/gemartin99/Push-Swap-Tester) — Comprehensive automated stress-tester for 42 students.
+
+
+* **Official Documentation:**
+* 42 Subject PDF (Internal curriculum document detailing error management, edge cases, and mandatory norms).
+"""
+3. **Resources:** Provides curated links to popular guides, visualizers, and automated third-party tes
