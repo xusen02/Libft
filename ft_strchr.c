@@ -6,13 +6,13 @@
 /*   By: txu-sen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/30 13:24:14 by txu-sen           #+#    #+#             */
-/*   Updated: 2026/07/30 14:29:16 by txu-sen          ###   ########.fr       */
+/*   Updated: 2026/08/12 11:47:04 by txu-sen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <string.h>
-//#include <stdio.h>
+#include <string.h>
+#include <stdio.h>
 char	*ft_strchr(const char *s, int c)
 {
 	char	target;
@@ -28,7 +28,7 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
-/*int  main ()
+int  main ()
 {
 	const char* text = "Hellow evernia nice to meet u am fine thank q";
 	char *ptr = ft_strchr(text, 'e');
@@ -43,4 +43,4 @@ char	*ft_strchr(const char *s, int c)
 		printf("not found\n");
 	}
 	return 0;
-}*/
+}

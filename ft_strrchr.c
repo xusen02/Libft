@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strrchr.c                                          :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: txu-sen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/30 14:39:11 by txu-sen           #+#    #+#             */
-/*   Updated: 2026/07/30 14:58:38 by txu-sen          ###   ########.fr       */
+/*   Updated: 2026/08/12 11:47:59 by txu-sen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <string.h>
-//#include <stdio.h>
+#include <string.h>
+#include <stdio.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -31,7 +31,7 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)s);
 	return (last_found);
 }
-/*int main()
+int main()
 {
 	const char* text = "Hellow evernia nice to meet u am fine thank q";
 	char *ptr = ft_strrchr(text, 'e');
@@ -46,4 +46,4 @@ char	*ft_strrchr(const char *s, int c)
 		printf("not found\n");
 	}
 	return 0;
-}*/
+}

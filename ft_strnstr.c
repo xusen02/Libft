@@ -6,13 +6,13 @@
 /*   By: txu-sen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/30 17:54:31 by txu-sen           #+#    #+#             */
-/*   Updated: 2026/08/01 12:36:44 by txu-sen          ###   ########.fr       */
+/*   Updated: 2026/08/13 17:38:20 by txu-sen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
-//#include <string.h>
+#include <stdio.h>
+#include <string.h>
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
@@ -38,7 +38,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-/*int main()
+int main()
 {
     const char *haystack = "Hello, welcome to 42!";
     const char *needle = "welcome";
@@ -53,4 +53,4 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
     return (0);
 
-}*/
+}
