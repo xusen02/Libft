@@ -12,7 +12,7 @@
 
 #include "libft.h"
 #include <string.h>
-#include <stdio.h>
+//#include <stdio.h>
 char	*ft_strchr(const char *s, int c)
 {
 	char	target;
@@ -28,7 +28,7 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
-int  main ()
+/*int  main ()
 {
 	const char* text = "Hellow evernia nice to meet u am fine thank q";
 	char *ptr = ft_strchr(text, 'e');
@@ -43,4 +43,4 @@ int  main ()
 		printf("not found\n");
 	}
 	return 0;
-}
+}*/
